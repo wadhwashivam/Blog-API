@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="public/output.css">
 </head>
 <body>
-    <a href="index.html" class="text-base mb-20"><- Back to all posts</a>
-    <div class="flex flex-col  items-center min-w-500 min-h-300">
-        <article class="min-w-100">
-            <h1 id="post-title" class="text-3xl mb-5"></h1>
-            <p id="post-content" class="text-xl"></p>
+    <header class="navbar border-b border-base-300 px-6">
+        <a href="index.html" class="text-sm">&larr; Back to all posts</a>
+    </header>
+
+    <main class="mx-auto max-w-2xl px-6 py-10">
+        <article>
+            <h1 id="post-title" class="text-3xl font-semibold mb-5"></h1>
+            <p id="post-content" class="text-lg leading-relaxed whitespace-pre-line"></p>
         </article>
 
-        <div class="flex flex-col mt-100 min-w-100">
-            <h2 class="text-base">Comments: </h2>
-            <ul id="comment-list" class="list bg-base-100 rounded-box shadow-md max-w-md max-auto mt-6 mb-10"></ul>
+        <section class="mt-12">
+            <h2 class="text-base font-semibold">Comments</h2>
+            <ul id="comment-list" class="list bg-base-100 rounded-box shadow-md mt-4 mb-8"></ul>
 
-            <form id="comment-form">
-                <textarea id="comment-content" required class="textarea textarea-primary min-w-100"></textarea>
-                <br>
-                <div class="flex flex-col">
-                    <button type="submit" class="btn btn-success">Post Content</button>
-                </div>
-
+            <form id="comment-form" class="flex flex-col gap-3">
+                <textarea id="comment-content" required class="textarea textarea-primary w-full" placeholder="Write a comment"></textarea>
+                <button type="submit" class="btn btn-success">Post comment</button>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
+
     <script src="js/config.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/api.js"></script>
